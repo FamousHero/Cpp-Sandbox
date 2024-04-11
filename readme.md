@@ -1,0 +1,2 @@
+A simple SandBox to write and test cpp code while reading PPP. 
+(4/8) Write a function to take a float and manually convert it to int. Since cpp can implicitly convert float to in, I want to see if I understand how at the binary level. Best guess is take the exponent and bit-shift mantra by that much. whatever is left is your int. Testing by still returning a float-if its a whole number it works.
