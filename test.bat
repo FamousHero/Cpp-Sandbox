@@ -1,3 +1,3 @@
 @echo off
-Start notepad "test.txt"
+Start notepad "test_code.txt"
 exit

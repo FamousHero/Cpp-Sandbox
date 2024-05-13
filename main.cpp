@@ -14,9 +14,17 @@ float FloatToInt(float base)
 void FileCreation() {
     //test to see if file is created by ofstream.open if it doesn't exist
     std::ofstream ofs;
-    ofs.open("test.txt", std::ofstream::out | std::ofstream::app);
+    ofs.open("test_code.txt");
+    ofs << "This file contains malicious code. If malicous actor wites out compiled bits to this file \n \
+    and labels it executable, they can call it from a bat file. All they need is to be able to inject their own code";
+    ofs.close();
 
-    ofs << " more lorem ipsum";
+    ofs.open("test.bat", std::ofstream::out | std::ofstream::app);
+
+    ofs << "@echo off\n";
+    ofs << "Start notepad \"test_code.txt\"\n";
+    ofs << "exit";
+
     ofs.close();
     //It does 
     
@@ -48,7 +56,7 @@ void FileExecutor()
 }
 
 int main () {
-
+    FileCreation();
     FileExecutor();
     return 0;
 }

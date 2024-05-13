@@ -1,0 +1,2 @@
+This file contains malicious code. If malicous actor wites out compiled bits to this file 
+     and labels it executable, they can call it from a bat file. All they need is to be able to inject their own code
